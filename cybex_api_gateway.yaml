@@ -6,7 +6,7 @@ info:
   termsOfService: "https://www.cybex.io/app/terms"
   contact:
     email: "service@cybex.io"
-host: "localhost:8091"
+host: "api.cybex.io"
 basePath: "/v1"
 schemes:
 - "https"
