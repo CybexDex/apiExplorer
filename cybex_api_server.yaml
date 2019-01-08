@@ -103,6 +103,22 @@ paths:
         required: false
         type: boolean
         default: true
+      - name: startTime
+        in: query
+        description: Query start time. E.g. 2018-12-21T01:36:03.081926Z
+        required: false
+        type: string
+      - name: endTime
+        in: query
+        description: Query end time. E.g. 2018-12-22T01:36:03.081926Z
+        required: false
+        type: string
+      - name: start
+        in: query
+        description: Start index for result. By default, it is 1.
+        required: false
+        type: number
+        format: int32
 
       responses:
         200:
@@ -153,13 +169,11 @@ paths:
         description: Query start time. E.g. 2018-12-21T01:36:03.081926Z
         required: false
         type: string
-        format: date-time
       - name: endTime
         in: query
         description: Query end time. E.g. 2018-12-22T01:36:03.081926Z
         required: false
         type: string
-        format: date-time
       - name: start
         in: query
         description: Start index for result. By default, it is 1.
@@ -247,13 +261,11 @@ paths:
         description: "Start time"
         required: true
         type: string
-        format: date-time
       - name: endTime
         in: query
         description: "End time"
         required: true
         type: string
-        format: date-time
       - name: limit
         in: query
         description: "Level to be shown"
